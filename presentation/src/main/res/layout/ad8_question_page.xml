@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="viewModel"
+            type="com.ad8.presentation.ad8.question_page.AD8QuestionViewModel" />
+
+        <variable
+            name="clickHandler"
+            type="com.ad8.presentation.ad8.question_page.AD8QuestionPageFragment.ClickHandler" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_back_ground"
+
+        android:layoutDirection="ltr">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarId"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/white"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:id="@+id/txtToolbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="16dp"
+                        android:drawableStart="@drawable/ic_arraw_back"
+                        android:drawablePadding="16dp"
+                        android:fontFamily="@font/lato_semi_bold"
+                        android:gravity="center_vertical"
+                        android:onClick="@{clickHandler::onBackClickListener}"
+                        android:text="AD8 Cognition Test"
+
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:id="@+id/mainView"
+                android:fillViewport="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+              >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:drawablePadding="16dp"
+                    android:fontFamily="@font/lato_semi_bold"
+                    android:gravity="center_vertical"
+                    android:text="Question 1/8"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="40dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:background="#DFDFDF"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/percentView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:background="@drawable/ad8_gradient" />
+
+                        <View
+                            android:id="@+id/exteraView"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.9" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="460dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="24dp"
+                    app:cardCornerRadius="24dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingVertical="24dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/question"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:drawablePadding="16dp"
+                            android:fontFamily="@font/lato_semi_bold"
+                            android:lineSpacingExtra="8sp"
+                            android:text="1. Do you have difficulties with judgment (e.g., difficulties making decisions, bad financial decisions, problems with thinking)?"
+                            android:textColor="@color/primaryTextColor"
+                            android:textSize="20sp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:background="@{viewModel.yesSelected ? @drawable/ad8_gradient : @drawable/ad8_border_gray}"
+                            android:gravity="center_vertical"
+                            android:onClick="@{clickHandler::onYesClickListener}"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp">
+
+                            <RadioButton
+                                android:layout_width="30dp"
+                                android:layout_height="24dp"
+                                android:checked="@={viewModel.yesSelected}"
+                                android:clickable="false"
+                                android:theme="@style/MyRadioButton" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="16dp"
+                                android:fontFamily="@font/lato_semi_bold"
+                                android:text="@string/yes"
+                                android:textColor="@{viewModel.yesSelected ? @color/white : @color/primaryTextColor}"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@{viewModel.noSelected ? @drawable/ad8_gradient : @drawable/ad8_border_gray}"
+                            android:gravity="center_vertical"
+                            android:onClick="@{clickHandler::onNoClickListener}"
+
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp"
+
+                            >
+
+                            <RadioButton
+                                android:layout_width="30dp"
+                                android:layout_height="24dp"
+                                android:checked="@={viewModel.noSelected}"
+
+                                android:clickable="false"
+                                android:theme="@style/MyRadioButton" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="16dp"
+                                android:fontFamily="@font/lato_semi_bold"
+                                android:text="@string/no"
+                                android:textColor="@{viewModel.noSelected ? @color/white : @color/primaryTextColor}"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@{viewModel.notSureSelected ? @drawable/ad8_gradient : @drawable/ad8_border_gray}"
+                            android:gravity="center_vertical"
+                            android:onClick="@{clickHandler::onNotSureClickListener}"
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="12dp">
+
+                            <RadioButton
+                                android:layout_width="30dp"
+                                android:layout_height="24dp"
+                                android:checked="@={viewModel.notSureSelected}"
+                                android:clickable="false"
+                                android:theme="@style/MyRadioButton" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="16dp"
+                                android:fontFamily="@font/lato_semi_bold"
+                                android:text="@string/not_sure"
+                                android:textColor="@{viewModel.notSureSelected ? @color/white : @color/primaryTextColor}"
+
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+
+            </LinearLayout>
+        </ScrollView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:enabled="true"
+            android:fontFamily="@font/lato_bold"
+            android:onClick="@{clickHandler::onNextClicked}"
+            android:paddingHorizontal="64dp"
+            android:text="Next Question"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/colorPrimary"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

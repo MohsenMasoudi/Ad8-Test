@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+
+android {
+
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+        kotlinOptions {
+            freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
+        }
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'com.ad8.domain'
+
+}
+
+configurations {
+    unitTestImplementation.extendsFrom testImplementation
+}
+
+dependencies {
+    rootProject.DomainModuleDependencies.each {
+        add(it.configuration, it.dependency, it.options)
+    }
+    implementation 'com.google.code.gson:gson:2.10'
+
+}
+kapt {
+    correctErrorTypes true
+}
+

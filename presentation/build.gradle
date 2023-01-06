@@ -1,0 +1,93 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'com.google.dagger.hilt.android'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+android {
+
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    defaultConfig {
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        testInstrumentationRunner rootProject.ext.testInstrumentationRunner
+
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'com.ad8.presentation'
+}
+
+dependencies {
+    implementation 'com.google.dagger:dagger-android-support:2.44'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    kapt 'com.google.dagger:dagger-android-processor:2.44'
+    kapt 'com.google.dagger:dagger-compiler:2.44'
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltExtVersion"
+    implementation platform("com.google.firebase:firebase-bom:$firebaseBomVersion")
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation( 'com.github.thekhaeng:pushdown-anim-click:1.1.1' ){
+        exclude group: 'com.android.support'
+    }
+    implementation "com.otaliastudios:zoomlayout:1.9.0"
+    implementation 'com.github.shopgun:zoomlayout:3.0.0'
+
+    rootProject.PeresentationModuleDependencies.each {
+        add(it.configuration, it.dependency, it.options)
+    }
+
+    implementation project(':domain')
+    def lifecycle_version = "2.4.0"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    def nav_version = "2.5.2"
+
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
+
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+
+    // Jetpack Compose Integration
+    implementation "androidx.navigation:navigation-compose:$nav_version"
+}
+
+kapt {
+    correctErrorTypes true
+}

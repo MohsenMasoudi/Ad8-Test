@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/AD8FirstPageFragment">
+
+
+
+    <fragment
+        android:id="@+id/AD8FirstPageFragment"
+        android:name="com.ad8.presentation.ad8.first_page.AD8FirstPageFragment"
+        android:label="AD8FirstPageFragment" >
+        <action
+            android:id="@+id/action_AD8FirstPageFragment_to_AD8SecondPageFragment"
+            app:destination="@id/AD8SecondPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AD8SecondPageFragment"
+        android:name="com.ad8.presentation.ad8.seconde_page.AD8SecondPageFragment"
+        android:label="AD8SecondPageFragment" >
+        <action
+            android:id="@+id/action_AD8SecondPageFragment_to_AD8QuestionPageFragment"
+            app:destination="@id/AD8QuestionPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AD8QuestionPageFragment"
+        android:name="com.ad8.presentation.ad8.question_page.AD8QuestionPageFragment"
+        android:label="AD8QuestionPageFragment" >
+        <action
+            android:id="@+id/action_AD8QuestionPageFragment_to_AD8ResultPageFragment"
+            app:destination="@id/AD8ResultPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AD8ResultPageFragment"
+        android:name="com.ad8.presentation.ad8.result_page.AD8ResultPageFragment"
+        android:label="AD8ResultPageFragment" >
+        <action
+            android:id="@+id/action_AD8ResultPageFragment_to_AD8FirstPageFragment"
+            app:destination="@id/AD8FirstPageFragment" />
+        <argument
+            android:name="result"
+            android:defaultValue="1"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>

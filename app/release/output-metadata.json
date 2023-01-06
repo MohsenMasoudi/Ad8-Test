@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.livingmaples.dementia.brain.test",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 6,
+      "versionName": "1.0",
+      "outputFile": "livingMaples_2023_01_03_14_35.apk"
+    }
+  ],
+  "elementType": "File"
+}

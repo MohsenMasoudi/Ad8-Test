@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "147012671019",
+    "project_id": "strooptest-10f14",
+    "storage_bucket": "strooptest-10f14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147012671019:android:be5cfd017fdc91b8077c6e",
+        "android_client_info": {
+          "package_name": "com.livingmaples.dementia.brain.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3k94vahGcZtZu02cx57LZ8LJcWdl5wuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147012671019:android:2fab594bfdb63b14077c6e",
+        "android_client_info": {
+          "package_name": "com.livingmaples.stroop.brain.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3k94vahGcZtZu02cx57LZ8LJcWdl5wuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

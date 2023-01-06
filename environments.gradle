@@ -1,0 +1,36 @@
+class Environments {
+    String baseURL = ""
+    String basePhotoURL = ""
+}
+
+class EnvironmentItems {
+    Environments debug = new Environments()
+    Environments release = new Environments()
+
+}
+
+EnvironmentItems environments = new EnvironmentItems()
+
+
+/**
+ * StroopTest
+ */
+//environments.debug.baseURL = "https://api-stroop.livingmaples.com/"
+//environments.debug.basePhotoURL = ""
+//environments.release.baseURL = "https://api-stroop.livingmaples.com/"
+//environments.release.basePhotoURL = ""
+
+
+/**
+ * AD8
+ */
+environments.debug.baseURL = "https://api-ad8.livingmaples.com/"
+environments.debug.basePhotoURL = ""
+environments.release.baseURL = "https://api-ad8.livingmaples.com/"
+environments.release.basePhotoURL = ""
+
+
+
+
+ext.environments = environments
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6A2688</color>
+    <color name="colorPrimary20Alpha">#055078</color>
+    <color name="colorPrimaryDark">#6A2688</color>
+    <color name="colorPrimaryLight">#055078</color>
+    <color name="colorAccent">#F0AD4B</color>
+    <color name="colorAccentDark">#E3A345</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="halfBlackTextColor">#80000000</color>
+    <color name="SecondaryTextColor">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray_background">#D1CFCF</color>
+    <color name="dividerColor">#1A000000</color>
+    <color name="deactiveButtonColor">#DADADA</color>
+    <color name="grayBackground">#F8F8F8</color>
+    <color name="_4d4d4d">#4d4d4d</color>
+    <color name="black">#000000</color>
+    <color name="black_alpha">#80000000</color>
+    <color name="deactivePrimaryButtonColor">#80004E42</color>
+    <color name="deactiveAccentButtonColor">#80F0AD4B</color>
+    <color name="order_gray_bg">#EFEFEF</color>
+    <color name="deactvieTextColor">#6a6a6a</color>
+    <color name="greenHighlight">#95DAC1</color>
+    <color name="yellowHighlight">#FFF47D</color>
+    <color name="redHighlight">#EFB7B7</color>
+    <color name="ordersLightGreenBackground">#1F004E42</color>
+    <color name="ordersLightYellowBackground">#36F0AD4B</color>
+    <color name="redTextColor">#D32738</color>
+    <color name="redOrderBackground">#D32738</color>
+    <color name="redOrderBackgroundWithAlpha">#66D32738</color>
+    <color name="counterBackgroundColor">#f8f8f8</color>
+    <color name="redCheckbox">#EC255A</color>
+    <color name="blueCheckbox">#325288</color>
+    <color name="backgroundMessagesGreen_alpha_5">#0D004E42</color>
+    <color name="backgroundMessagesGreen_alpha_40">#66004E42</color>
+    <color name="transprent_black">#8000</color>
+    <color name="color_other_department">#D1CFCF</color>
+    <color name="blue_border">#396DA2</color>
+    <color name="blue_border_aplpha">#4D4A88C7</color>
+    <color name="transparent">#00000000</color>
+    <color name="whitAlpha">#66FFFFFF</color>
+    <color name="StroopYellow">#ECC600</color>
+    <color name="StroopGreen">#027C00</color>
+    <color name="StroopBlue">#046FD2</color>
+    <color name="StroopRed">#F00B0B</color>
+    <color name="StroopBrown">#764A22</color>
+    <color name="stroopTestGreenProgressView">#148B44</color>
+    <color name="stroopTestOrangeProgressView">#EC9109</color>
+    <color name="grayText">#565656</color>
+
+
+
+
+</resources>

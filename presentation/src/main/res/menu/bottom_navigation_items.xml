@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item-->
+<!--        android:id="@+id/dashboardFragment"-->
+<!--        android:icon="@drawable/ic_home"-->
+<!--        android:title="@string/dashboard"-->
+<!--        />-->
+
+    <item
+        android:id="@+id/orderTrackingFragment"
+        android:icon="@drawable/ic_order_traking"
+        android:title=""
+        />
+
+
+    <item
+        android:id="@+id/productsFragment"
+        android:icon="@drawable/ic_products"
+        android:title=""
+         />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title=""
+        />
+
+
+    <item
+        android:id="@+id/notificationsFragment"
+        android:icon="@drawable/ic_sidebar_notifications"
+        android:title=""
+        />
+
+</menu>

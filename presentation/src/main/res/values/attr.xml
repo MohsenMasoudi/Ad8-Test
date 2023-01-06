@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+    <attr name="colorNavigationItem" format="color" />
+    <attr name="colorNavigationItemSelected" format="color" />
+
+    <attr name="drawableNavigationItemBackground" format="reference" />
+
+    <declare-styleable name="FabBottomNavigationView">
+        <attr name="fab_cradle_margin" format="dimension"/>
+        <attr name="fab_cradle_rounded_corner_radius" format="dimension"/>
+        <attr name="cradle_vertical_offset" format="dimension"/>
+        <attr name="fab_size" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="advDrawerLayout">
+        <attr name="adl_customBehavior" format="boolean" />
+        <attr name="adl_viewScale" format="float" />
+        <attr name="adl_viewScrimColor" format="color" />
+        <attr name="adl_viewElevation" format="dimension" />
+        <attr name="adl_drawerElevation" format="dimension" />
+        <attr name="adl_cardBackgroundColor" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="ImageViewZoom">
+        <attr name="circle" format="boolean" />
+    </declare-styleable>
+    </resources>

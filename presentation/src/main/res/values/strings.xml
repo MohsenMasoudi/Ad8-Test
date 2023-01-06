@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Dementia Test</string>
+
+    <string name="welcome_to_stroop_test">Welcome to Stroop Test!</string>
+    <string name="you_will_see_a_sequence_of_60_words_for_the_first_20_try_to_identify_the_color_used_to_display_each_word">You will see a sequence of 60 words. For the first 20, try to identify the color used to display each word.</string>
+    <string name="good_luck_and_try_to_be_as_quick_as_possible">Good luck, and try to be as quick as possible!</string>
+    <string name="begin_test">Begin Test</string>
+    <string name="first_part_instruction">First Part instruction</string>
+    <string name="third_part_instruction">Third Part instruction</string>
+    <string name="you_have_picked_with_medium_accuracy_on_your_next_attempt_try_to_select_the_correct_answers">You have picked with medium accuracy. On your next attempt, try to select the correct answers</string>
+    <string name="seconde_page_description">We are going to ask you eight questions. You will see three options (yes, no, not sure). There is no time limitation. You can take the Test yourself or read the questions out loud to a family member. AD8 can detect early cognitive changes associated with many common dementias. It is essential to see your doctor if the score results indicate cognitive impairment.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="not_sure">Not Sure</string>
+</resources>

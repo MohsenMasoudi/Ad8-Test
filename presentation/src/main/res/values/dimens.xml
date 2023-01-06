@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="defaultLayoutsCorner">10dp</dimen>
+    <dimen name="login_rounded_white_background_top_corner">64dp</dimen>
+    <dimen name="sort_icon_start_margin">4dp</dimen>
+    <dimen name="dashboard_digit_text_size">42sp</dimen>
+    <dimen name="swipe_width">24dp</dimen>
+    <dimen name="space">16dp</dimen>
+    <dimen name="grid_space">14dp</dimen>
+    <dimen name="grid_space_title">1dp</dimen>
+    <dimen name="space_item">3dp</dimen>
+</resources>

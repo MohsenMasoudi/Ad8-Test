@@ -1,0 +1,53 @@
+apply from: 'dependencies.gradle'
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlinVersion = '1.7.20'
+        navigationVersion = '2.4.1'
+        hiltVersion = '2.44'
+        sonarqubeVersion = '3.0'
+        gradleVersion = '7.3.0'
+        googleServicesVersion = '4.3.10'
+        crashlyticsVersion = '2.5.2'
+    }
+    repositories {
+        google()
+        mavenCentral()
+
+        maven {
+
+            url "https://plugins.gradle.org/m2/"
+
+        }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlinVersion"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$crashlyticsVersion"
+        def nav_version = "2.5.2"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+        classpath 'com.google.gms:google-services:4.3.13'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+
+        maven {
+
+            url "https://plugins.gradle.org/m2/"
+
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

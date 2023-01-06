@@ -1,0 +1,172 @@
+import dependencies.*
+
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.dagger.hilt.android'
+    id 'androidx.navigation.safeargs.kotlin'
+
+
+}
+def versionCodeDate() {
+    return new Date().format("yyMMddHH").toInteger()
+}
+def versionNameDate() {
+    return new Date().format("YYYY/MM/dd HHـmm")
+}
+
+def outPutNameDate(){
+    return new Date().format("YYYY_MM_dd_HH_mm")
+
+}
+android {
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+    signingConfigs {
+//        debug {
+//            storeFile file('/home/mohsen/AndroidStudioProjects/sozer_android_v1/key.jks')
+//            storePassword '74695747'
+//            keyPassword '74695747'
+//            keyAlias 'sozer'
+//        }
+    }
+
+
+    /* signingConfigs {
+         config {
+             storeFile file('C:\\dev\\AndroidStudioProjects\\Varmi\\key.jks')
+             storePassword '74695747'
+             keyAlias 'varmi'
+             keyPassword '74695747'
+         }
+     }*/
+    compileSdkVersion rootProject.ext.androidCompileSdkVersion
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+//        applicationId "com.livingmaples.stroop.brain.test"
+        applicationId "com.livingmaples.dementia.brain.test"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+//        versionCode rootProject.ext.versionCode
+//        versionName rootProject.ext.versionName//
+        versionCode 6
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+        //signingConfig signingConfigs.config
+    }
+
+    buildTypes {
+
+
+        debug {
+
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+            //  applicationIdSuffix ".debug"
+//            versionNameSuffix "-DEBUG"
+            signingConfig android.signingConfigs.debug
+
+/*            Properties properties = new Properties()
+            if (rootProject.file("local.properties").exists()) {
+                properties.load(rootProject.file("local.properties").newDataInputStream())
+            }
+            manifestPlaceholders = [ mapsApiKey : properties.getProperty("MAPS_API_KEY", "") ]*/
+        }
+        release {
+            minifyEnabled true
+            shrinkResources false
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            Properties properties = new Properties()
+            if (rootProject.file("local.properties").exists()) {
+                properties.load(rootProject.file("local.properties").newDataInputStream())
+            }
+//            def newApkName = "Sozer" + versionNameDate + ".apk"
+
+//            outputFileName = new File(versionNameDate())
+            // Inject the Maps API key into the manifest
+            //manifestPlaceholders = [ mapsApiKey : properties.getProperty("MAPS_API_KEY", "") ]
+        }
+        applicationVariants.all{
+                // this method is use to rename your all apk weather
+                // it may be signed or unsigned(debug apk)
+            variant ->
+                variant.outputs.each{
+                        // on below line we are setting a
+                        // name to our apk as GFG.apk
+                    output->
+                        def name = "livingMaples_"+outPutNameDate()+ ".apk"
+                        // on below line we are setting the
+                        // outputFile Name to our apk file.
+                        output.outputFileName = name
+                }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/license.txt', 'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/notice.txt', 'META-INF/ASL2.0', 'META-INF/*.kotlin_module']
+        }
+    }
+    namespace 'com.ad8.app'
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':data')
+    implementation project(':presentation')
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    kapt "androidx.hilt:hilt-compiler:$hiltExtVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    implementation "androidx.core:core-ktx:$coreKtxVersion"
+    //android
+    //noinspection GradleDependency
+
+    implementation "androidx.fragment:fragment-ktx:$fragmentExtVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.multidex:multidex:$multidexVersion"
+    implementation platform("com.google.firebase:firebase-bom:$firebaseBomVersion")
+    implementation 'com.google.firebase:firebase-analytics'
+    //dependency injection
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hiltExtVersion"
+
+    //network
+
+    //other
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.code.gson:gson:2.10'
+
+}
+
+kapt {
+    correctErrorTypes true
+}

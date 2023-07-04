@@ -30,6 +30,13 @@ android {
         baseline = file("lint-baseline.xml")
     }
     signingConfigs {
+        realese {
+            storeFile file('C:\\Users\\Mohsen\\Downloads\\stroop_test.jks')
+            storePassword 'gaQPwcG8UqS5g3H'
+            keyPassword 'gaQPwcG8UqS5g3H'
+            keyAlias 'strooptest'
+        }
+
 //        debug {
 //            storeFile file('/home/mohsen/AndroidStudioProjects/sozer_android_v1/key.jks')
 //            storePassword '74695747'
@@ -65,10 +72,10 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
 //        versionCode rootProject.ext.versionCode
 //        versionName rootProject.ext.versionName//
-        versionCode 6
+        versionCode 8
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        signingConfig signingConfigs.debug
+        signingConfig signingConfigs.realese
         //signingConfig signingConfigs.config
     }
 
@@ -82,7 +89,7 @@ android {
             debuggable true
             //  applicationIdSuffix ".debug"
 //            versionNameSuffix "-DEBUG"
-            signingConfig android.signingConfigs.debug
+            signingConfig signingConfigs.realese
 
 /*            Properties properties = new Properties()
             if (rootProject.file("local.properties").exists()) {

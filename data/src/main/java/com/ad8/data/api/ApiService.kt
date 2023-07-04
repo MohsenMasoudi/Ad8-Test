@@ -36,6 +36,9 @@ interface ApiService {
     ): Deferred<UpdateRecordRemote>
 
 
+
+
+
     @Headers("Content-Type: application/json")
     @POST("api/v1/activities")
     fun stroopTestCreateActivityAsync(
@@ -51,10 +54,27 @@ interface ApiService {
     fun ad8RegisterAsync(): Deferred<RegisterRemote>
 
     @Headers("Content-Type: application/json")
-    @POST("api/v1/records")
+    @POST("api/v2/records")
     fun ad8CreateRecordAsync(
         @Body body: Ad8AnswerRB?
     ): Deferred<AD8AnswerRemote>
+
+
+    @Headers("Content-Type: application/json")
+    @POST("api/v2/records")
+    fun ad8UpdateRecordAsync(
+        @Body body: Ad8AnswerRB?
+    ): Deferred<AD8AnswerRemote>
+
+
+    @Headers("Content-Type: application/json")
+    @POST("api/v2/records/{record_id}")
+    fun GoogleAuthSignInAsync(
+        @Body body: SingInRB? = null
+    ): Deferred<GoogleSignInRemote>
+
+
+
 }
 
 

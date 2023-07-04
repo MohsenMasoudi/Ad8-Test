@@ -59,7 +59,7 @@ class AD8FirstPageFragment : BaseFragment<Ad8FirstPageBinding>(R.layout.ad8_firs
         }
 
         fun onNextClicked(view: View) {
-            findNavController().navigate(AD8FirstPageFragmentDirections.actionAD8FirstPageFragmentToAD8SecondPageFragment())
+            findNavController().navigate(AD8FirstPageFragmentDirections.actionAD8FirstPageFragmentToAD8QuestionPageFragment())
         }
     }
 

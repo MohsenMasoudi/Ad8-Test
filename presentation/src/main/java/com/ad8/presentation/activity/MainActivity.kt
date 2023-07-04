@@ -26,6 +26,7 @@ import com.ad8.presentation.util.fcm.ApplicationNotification
 import com.ad8.presentation.util.fcm.MyNotificationReceiver.Companion.NOTIFICATION_BROADCAST
 import com.ad8.presentation.util.observe
 import dagger.hilt.android.AndroidEntryPoint
+import io.sentry.Sentry
 import java.util.Timer
 import javax.inject.Inject
 
@@ -47,7 +48,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
                     NOTIFICATION_BROADCAST -> {
                         val key = intent.getStringExtra("key")
                         val noticeId = intent.getIntExtra("noticeId", 0)
-                        val notificationDb = loadFromSp<ApplicationNotification>("NOTIFICATION$noticeId", ApplicationNotification())
+                        val notificationDb = loadFromSp("NOTIFICATION$noticeId", ApplicationNotification())
                         if (notificationDb.key == NOTIFICATION_TYPE_ORDER_DETAIL) {
                             val isLogin = loadFromSp<Boolean>(IS_USER_LOGIN, false)
 //                            if (isLogin) {
@@ -111,6 +112,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     }
 
     fun setupUI() {
+        Sentry.captureMessage("testing SDK setup")
         token = loadFromSp(Constants.ACCESS_TOKEN, "")
         if (token.isNullOrEmpty()) {
             viewModel.fetchRegister()

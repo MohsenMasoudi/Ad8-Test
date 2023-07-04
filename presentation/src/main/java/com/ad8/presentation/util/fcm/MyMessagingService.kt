@@ -86,7 +86,7 @@ class MyMessagingService : FirebaseMessagingService() {
             deletePendingIntent = PendingIntent.getBroadcast(this, 0, deleteIntent, PendingIntent.FLAG_UPDATE_CURRENT)
             //endregion
 
-            val largeIcon = BitmapFactory.decodeResource(resources, R.mipmap.ic_sozer_icon)
+            val largeIcon = BitmapFactory.decodeResource(resources, R.mipmap.ic_launcher)
 
             //region Big text style
 

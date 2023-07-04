@@ -12,10 +12,11 @@ data class AD8AnswerRemote(
         var created_at: String?,
         var id: Int?,
         var updated_at: String?,
-        var user_id: Int?
+        var user_id: Int?,
+        var status: String?
     ): ResponseObject<AD8Answer.Data> {
         override fun toDomain(): AD8Answer.Data {
-            return AD8Answer.Data(answers,created_at,id,updated_at,user_id)
+            return AD8Answer.Data(answers,created_at,id,updated_at,user_id,status)
         }
     }
 

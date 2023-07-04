@@ -88,8 +88,6 @@ class AD8ResultPageFragment : BaseFragment<Ad8ResultPageBinding>(R.layout.ad8_re
                 "The best thing to do is to talk to your healthcare provider as soon as possible."
         }
         val answer = loadFromSp<ArrayList<String>>(AD8_ANSWER, arrayListOf<String>())
-//        Log.d("answer12",answer.toString())
-//        Log.d("AD8QuestionPageFragment", "fetchAnswerFetch")
         main(stringAnswer)
         Log.e("AD8ResultPageFragment", "setupUI: ${stringAnswer}")
 

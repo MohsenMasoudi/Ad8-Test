@@ -21,10 +21,10 @@
     </queries>
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_ad8"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/ic_launcher_ad8_round"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:name=".application.SozerApplication"
@@ -63,6 +63,13 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+            <meta-data android:name="io.sentry.dsn" android:value="https://a4cbd5ef2223413e83c5c12fe503fd52@sentry.livingmaples.com/14" />
+            <!-- Set tracesSampleRate to 1.0 to capture 100% of transactions for performance monitoring.
+               We recommend adjusting this value in production. -->
+            <meta-data android:name="io.sentry.traces.sample-rate" android:value="1.0" />
+            <!-- Enable user interaction tracing to capture transactions for various UI events (such as clicks or scrolls). -->
+            <meta-data android:name="io.sentry.traces.user-interaction.enable" android:value="true" />
     </application>
 
 </manifest>

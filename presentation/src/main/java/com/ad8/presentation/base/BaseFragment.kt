@@ -29,40 +29,6 @@ abstract class BaseFragment<VDB : ViewDataBinding>(
         var isShowingExpireDialog: Boolean = false
     }
 
-
-
-
-    /* fun showAlert(
-         title: String = getString(R.string.attention),
-         message: String = "",
-         positiveCaption: String = getString(R.string.finish),
-         negativeCaption: String = getString(R.string.no),
-         positiveAction: View.OnClickListener? = null,
-         negativeAction: View.OnClickListener? = null
-     ) {
-         if (!BaseFragment.isShowingExpireDialog) {
-             MaterialAlertDialogBuilder(requireContext(), R.style.AlertDialogTheme)
-                 .setTitle(title)
-                 .setMessage(message)
-                 .setOnDismissListener { BaseFragment.isShowingExpireDialog = false }
-                 .setPositiveButton(
-                     positiveCaption
-                 ) { dialog, _ ->
-                     positiveAction?.onClick(view)
-                     dialog.dismiss()
-                 }
-                 .setNegativeButton(negativeCaption) { dialog, _ ->
-                     negativeAction?.onClick(view)
-                     dialog.dismiss()
-                 }
-                 .create().show()
-             BaseFragment.isShowingExpireDialog = true
-         }
-
-     }
- */
-
-
     lateinit var binding: VDB
 
     override fun onCreateView(
@@ -91,20 +57,6 @@ abstract class BaseFragment<VDB : ViewDataBinding>(
     ).toInt()
 
 
-    /*  if (onClickListener != null) {
-          val snackBar = Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
-              .setAction(getString(R.string.try_again), onClickListener)
-          val fab: FloatingActionButton = (activity as MainActivity).binding.fab
-          if (fab.visibility == View.VISIBLE)
-              snackBar.anchorView = (activity as MainActivity).binding.fab
-          snackBar.show()
-      } else {
-          val snackBar = Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
-          val fab: FloatingActionButton = (activity as MainActivity).binding.fab
-          if (fab.visibility == View.VISIBLE)
-              snackBar.anchorView = (activity as MainActivity).binding.fab
-          snackBar.show()
-      }*/
 
 
     open fun runLayoutAnimation(recyclerView: RecyclerView) {
@@ -121,7 +73,6 @@ abstract class BaseFragment<VDB : ViewDataBinding>(
         val context = recyclerView.context
         val controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_animation_from_bottom)
         recyclerView.layoutAnimation = controller
-        //recyclerView.adapter!!.notifyDataSetChanged()
         recyclerView.scheduleLayoutAnimation()
     }
 

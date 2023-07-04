@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "147012671019",
-    "project_id": "strooptest-10f14",
-    "storage_bucket": "strooptest-10f14.appspot.com"
+    "project_number": "151255646905",
+    "project_id": "testalzhiemer",
+    "storage_bucket": "testalzhiemer.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:147012671019:android:be5cfd017fdc91b8077c6e",
+        "mobilesdk_app_id": "1:151255646905:android:b0ee3793fa37c5fbf45168",
         "android_client_info": {
-          "package_name": "com.livingmaples.dementia.brain.test"
+          "package_name": "com.livingmaples.alzheimer.brain.test.stage"
         }
       },
       "oauth_client": [
         {
-          "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+          "client_id": "151255646905-ulvdq4b1e51ub1c7el30hp50hv9o2dtq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.livingmaples.alzheimer.brain.test.stage",
+            "certificate_hash": "84f4ae462f739e745493fef066ccd79d7148c47d"
+          }
+        },
+        {
+          "client_id": "151255646905-m0dee5ptlsnl03hsufejga0bq4f3dct9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA3k94vahGcZtZu02cx57LZ8LJcWdl5wuw"
+          "current_key": "AIzaSyAJeBCdPRIa1YSoHpwUdwy96PbE_tXbJxs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+              "client_id": "151255646905-1du3vj2sdgav7pbaid7bh01t92142d6g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -36,27 +44,101 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:147012671019:android:2fab594bfdb63b14077c6e",
+        "mobilesdk_app_id": "1:151255646905:android:db89f835a043f7b9f45168",
         "android_client_info": {
-          "package_name": "com.livingmaples.stroop.brain.test"
+          "package_name": "com.livingmaples.alzheimers.memory.test"
         }
       },
       "oauth_client": [
         {
-          "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+          "client_id": "151255646905-8gs593eqgi3foicb92lighabt9ql9v2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.livingmaples.alzheimers.memory.test",
+            "certificate_hash": "edfad7d05be376c05c24d7103d80571fa5eb5f4d"
+          }
+        },
+        {
+          "client_id": "151255646905-efd47fm0sig0vi1u7rekfhi0smqkjrdt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.livingmaples.alzheimers.memory.test",
+            "certificate_hash": "8b347a9788c20e0a8caf7fc02177d07890b75425"
+          }
+        },
+        {
+          "client_id": "151255646905-m0dee5ptlsnl03hsufejga0bq4f3dct9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyA3k94vahGcZtZu02cx57LZ8LJcWdl5wuw"
+          "current_key": "AIzaSyAJeBCdPRIa1YSoHpwUdwy96PbE_tXbJxs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "147012671019-pmhes89n9f915bc7ptouqfhbhch5ajq3.apps.googleusercontent.com",
+              "client_id": "151255646905-1du3vj2sdgav7pbaid7bh01t92142d6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151255646905:android:4f75fc8ae4eb7d97f45168",
+        "android_client_info": {
+          "package_name": "com.livingmaples.dementia.brain.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151255646905-m0dee5ptlsnl03hsufejga0bq4f3dct9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJeBCdPRIa1YSoHpwUdwy96PbE_tXbJxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151255646905-1du3vj2sdgav7pbaid7bh01t92142d6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151255646905:android:f0dae5cfad87f9a7f45168",
+        "android_client_info": {
+          "package_name": "com.livingmaples.stroop.brain.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151255646905-m0dee5ptlsnl03hsufejga0bq4f3dct9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJeBCdPRIa1YSoHpwUdwy96PbE_tXbJxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151255646905-1du3vj2sdgav7pbaid7bh01t92142d6g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

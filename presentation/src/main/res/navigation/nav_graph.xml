@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_AD8FirstPageFragment_to_AD8SecondPageFragment"
             app:destination="@id/AD8SecondPageFragment" />
+        <action
+            android:id="@+id/action_AD8FirstPageFragment_to_AD8QuestionPageFragment"
+            app:destination="@id/AD8QuestionPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/AD8SecondPageFragment"

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dementia Test</string>
+    <string name="app_name">Brain Test</string>
 
     <string name="welcome_to_stroop_test">Welcome to Stroop Test!</string>
     <string name="you_will_see_a_sequence_of_60_words_for_the_first_20_try_to_identify_the_color_used_to_display_each_word">You will see a sequence of 60 words. For the first 20, try to identify the color used to display each word.</string>

@@ -85,7 +85,6 @@ class MainViewModel @Inject constructor(
     private val _updateRecord: MutableLiveData<Result<UpdateRecord>> = MutableLiveData()
 
     fun updateRecord(record_id: String? ,body: UpdateRecordeRB?) {
-        Log.d("updateRecord", "updateRecord${record_id},${body}")
 
         if (record_id!="null"){
             execute {

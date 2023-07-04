@@ -56,9 +56,6 @@ class AD8QuestionPageFragment : BaseFragment<Ad8QuestionPageBinding>(R.layout.ad
     private fun registerResult(result: Result<Register>) {
         if (result is Result.Success) {
             val register = result.data
-            Log.d("AD8ResultPageFragment", "answerResult: ${result.data}")
-
-            Log.d("AD8QuestionPageFragment", "registerResultToken: ${register.data?.token}")
             saveToSp(Constants.ACCESS_TOKEN, register.data?.token)
             userHelper.saveToken(register.data?.token)
 
@@ -197,7 +194,6 @@ class AD8QuestionPageFragment : BaseFragment<Ad8QuestionPageBinding>(R.layout.ad
                             result++
                         }
                     }
-                    Log.d("result", result.toString())
                     val answerString = JSONArray(stringAnswer.toString())
 
                     saveToSp<ArrayList<String>>(AD8_ANSWER, stringAnswer)

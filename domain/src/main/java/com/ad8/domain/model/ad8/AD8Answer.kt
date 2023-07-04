@@ -9,6 +9,8 @@ data class AD8Answer(
         var created_at: String?,
         var id: Int?,
         var updated_at: String?,
-        var user_id: Int?
+        var user_id: Int?,
+        var status: String?
+
     )
 }
